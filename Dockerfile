@@ -18,6 +18,12 @@ RUN pip install diffusers
 RUN pip install accelerate
 RUN pip install googletrans==3.1.0a0
 RUN pip install numba
+RUN pip install ipython
+RUN pip install boto3
+RUN pip install transformers
+RUN pip install transformers[sentencepiece]
+RUN pip install -U "huggingface_hub[cli]"
+RUN huggingface-cli login --token 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
 # Add your file
 ADD handler.py .
 
